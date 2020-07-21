@@ -1,0 +1,23 @@
+{
+  "name": "covid-contact-neo4j",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "ejs": "^3.1.3",
+    "express": "*",
+    "morgan": "*",
+    "neo4j-driver": "^4.1.0",
+    "vue": "^2.6.11",
+    "vue-cli": "^2.9.6",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "repository": "https://github.com/MKazakova/covid-contact-neo4j.git",
+  "author": "MKazakova <45536947+MKazakova@users.noreply.github.com>",
+  "license": "MIT"
+}

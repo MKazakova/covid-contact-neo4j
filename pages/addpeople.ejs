@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+    <title>Contacts</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+    <h3>People</h3>
+
+    <form method="POST" action="/createPerson">
+        <input type="text" name="name" placeholder="Nom">
+        <input type="text" name="phone" placeholder="Téléphone">
+        <select name="status" class="form-control form-control-lg" style="width: 30%;">
+            <option value="yes">Positif</option> 
+            <option value="no">Negatif</option>
+            <option value="unknown" selected>Inconnu</option>
+        </select>
+        <input type="submit" value="Ajouter" class="btn btn-secondary">
+    </form>
+
+    <ul>
+        <% people.forEach(function(person){ %>
+            <li> <a href="/person/<%= person.id%>"><%= person.name %> (<%= person.phone %>)</a></li>
+        <% }) %>
+    </ul>
+
+</body>
+</html>

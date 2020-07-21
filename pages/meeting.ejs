@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Contacts</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+    <h1> <%= meeting.title %> </h1>
+    <h3> <%= meeting.date %> </h3>
+    <h5>Participants : </h5>
+    <ul>
+        <% participants.forEach(function(person){ %>
+            <li> <%= person.name %> </li>
+        <% }) %>
+    </ul>
+    <h5>Ajouter un participant</h5>
+    <form method="POST" action="/addparticipant">
+        <input type="text" name="phone" placeholder="phone">
+        <input type="text" name="meeting_id" value="<%= meeting.id %>" hidden>
+        <input type="submit" value="Ajouter" class="btn btn-secondary">
+    </form>
+
+</body>
+</html>
